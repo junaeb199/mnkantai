@@ -43,10 +43,11 @@
   <button id="no">No</button>
 
   <script>
+    // Selecciona los botones
     const noButton = document.getElementById('no');
     const yesButton = document.getElementById('yes');
 
-    // Evento para mover el botón "No"
+    // Mueve el botón "No" al acercar el cursor
     noButton.addEventListener('mouseenter', () => {
       const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
       const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
@@ -55,12 +56,12 @@
       noButton.style.top = ${randomY}px;
     });
 
-    // Evento para mostrar alerta cuando se hace clic en "Sí"
+    // Muestra un mensaje al hacer clic en "Sí"
     yesButton.addEventListener('click', () => {
       alert('¡Sabía que dirías que sí! 🥰 Nos vemos pronto en el sushi.');
     });
 
-    // Evento para evitar que "No" haga algo al hacer clic
+    // Muestra un mensaje al hacer clic en "No"
     noButton.addEventListener('click', () => {
       alert('¡No puedes decir que no! 😜');
     });
